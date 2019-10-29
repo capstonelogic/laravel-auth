@@ -1,5 +1,5 @@
 {
-    "name": "kodeine/laravel-acl",
+    "name": "capstonelogic/laravel-user-roles",
     "description": "Light-weight role-based permissions for Laravel 5 built in Auth system.",
     "license": "MIT",
     "keywords": [
@@ -12,6 +12,12 @@
         "eloquent"
     ],
     "authors": [
+        {
+            "name": "Roman Pavlyshyn",
+            "email": "pavlyshyn.roma@gmail.com",
+            "homepage": "https://github.com/capstonelogic",
+            "role": "Developer"
+        },
         {
             "name": "Ahsen M.",
             "homepage": "https://github.com/kodeine",
@@ -29,19 +35,19 @@
     },
     "autoload": {
         "psr-4": {
-            "Kodeine\\Acl\\": "src/Kodeine/Acl"
+            "CapstoneLogic\\Users\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Kodeine\\Acl\\Tests\\": "tests/"
+            "CapstoneLogic\\Users\\Tests\\": "tests/"
         }
     },
     "extra": {
-	    "laravel": {
-		    "providers": [
-                "Kodeine\\Acl\\AclServiceProvider"
+        "laravel": {
+            "providers": [
+                "CapstoneLogic\\Users\\UsersServiceProvider"
             ]
-	    }
+        }
     }
 }

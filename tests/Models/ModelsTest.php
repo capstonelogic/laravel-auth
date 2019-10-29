@@ -1,6 +1,6 @@
-<?php namespace Kodeine\Acl\Tests\Models;
+<?php namespace CapstoneLogic\Users\Tests\Models;
 
-use Kodeine\Acl\Tests\TestCase;
+use CapstoneLogic\Users\Tests\TestCase;
 
 abstract class ModelsTest extends TestCase
 {

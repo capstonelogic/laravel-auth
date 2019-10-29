@@ -1,7 +1,7 @@
-<?php namespace Kodeine\Acl\Tests\Models;
+<?php namespace CapstoneLogic\Users\Tests\Models;
 
-use Kodeine\Acl\Models\Eloquent\Permission;
-use Kodeine\Acl\Models\Eloquent\Role;
+use CapstoneLogic\Users\Model\Permission;
+use CapstoneLogic\Users\Model\Role;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class PermissionTest extends ModelsTest
@@ -42,7 +42,7 @@ class PermissionTest extends ModelsTest
     {
         $expectations = [
             \Illuminate\Database\Eloquent\Model::class,
-            \Kodeine\Acl\Models\Eloquent\Permission::class,
+            \CapstoneLogic\Users\Models\Eloquent\Permission::class,
         ];
 
         foreach ($expectations as $expected) {
@@ -58,7 +58,7 @@ class PermissionTest extends ModelsTest
         $this->assertInstanceOf(BelongsToMany::class, $rolesRelationship);
 
         $this->assertInstanceOf(
-            \Kodeine\Acl\Models\Eloquent\Role::class,
+            \CapstoneLogic\Users\Model\Role::class,
             $rolesRelationship->getRelated()
         );
     }

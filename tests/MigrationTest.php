@@ -1,4 +1,4 @@
-<?php namespace Kodeine\Acl\Tests;
+<?php namespace CapstoneLogic\Users\Tests;
 
 use Illuminate\Support\Facades\Schema;
 

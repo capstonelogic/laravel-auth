@@ -1,11 +1,11 @@
 
-# Kodeine/Laravel-ACL
+# CapstoneLogic/Laravel-ACL
 
 [![Laravel](https://img.shields.io/badge/Laravel-~6.0-green.svg?style=flat-square)](http://laravel.com)
-[![Source](http://img.shields.io/badge/source-kodeine/laravel--acl-blue.svg?style=flat-square)](https://github.com/kodeine/laravel-acl/)
-[![Build Status](https://img.shields.io/travis/kodeine/laravel-acl/master?style=flat-square)](https://travis-ci.org/kodeine/laravel-acl)
+[![Source](http://img.shields.io/badge/source-CapstoneLogic/laravel--acl-blue.svg?style=flat-square)](https://github.com/CapstoneLogic/laravel-acl/)
+[![Build Status](https://img.shields.io/travis/CapstoneLogic/laravel-acl/master?style=flat-square)](https://travis-ci.org/CapstoneLogic/laravel-acl)
 [![License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](https://tldrlegal.com/license/mit-license)
-[![Total Downloads](https://img.shields.io/packagist/dt/kodeine/laravel-acl.svg?style=flat-square)](https://packagist.org/packages/kodeine/laravel-acl)
+[![Total Downloads](https://img.shields.io/packagist/dt/CapstoneLogic/laravel-users.svg?style=flat-square)](https://packagist.org/packages/CapstoneLogic/laravel-acl)
 
 
 Laravel ACL adds role based permissions to built in Auth System of Laravel 6.0+. ACL middleware protects routes and even crud controller methods.
@@ -29,13 +29,13 @@ Laravel ACL adds role based permissions to built in Auth System of Laravel 6.0+.
 Install the package using composer 
 
 ```
-composer require kodeine/laravel-acl
+composer require CapstoneLogic/laravel-acl
 ```
 
 If you need to support Laravel 5.x, make sure to install version 1.x
 
 ```
-composer require kodeine/laravel-acl "^1.0"
+composer require CapstoneLogic/laravel-acl "^1.0"
 ```
 
 2. If you are using Laravel before version 5.4, manually register the service provider in your config/app.php file 
@@ -45,14 +45,14 @@ composer require kodeine/laravel-acl "^1.0"
     'Illuminate\Foundation\Providers\ArtisanServiceProvider',
     'Illuminate\Auth\AuthServiceProvider',
     ...
-    'Kodeine\Acl\AclServiceProvider',
+    'CapstoneLogic\Users\UsersServiceProvider',
 ],
 ```
 
 3. Publish the package configuartion files and add your own models to the list of ACL models"
 
 ```
-$ php artisan vendor:publish --provider="Kodeine\Acl\AclServiceProvider"
+$ php artisan vendor:publish --provider="CapstoneLogic\Users\UsersServiceProvider"
 ```
 
 > **Use your own models.**
@@ -63,14 +63,14 @@ $ php artisan vendor:publish --provider="Kodeine\Acl\AclServiceProvider"
 ```php
 protected $routeMiddleware = [
     ....
-    'acl' => 'Kodeine\Acl\Middleware\HasPermission',
+    'acl' => 'CapstoneLogic\Users\Middleware\HasPermission',
 ];
 ```
 
 5. Add the HasRole trait to your `User` model.
 
 ```php
-use Kodeine\Acl\Traits\HasRole;
+use CapstoneLogic\Users\Traits\HasRole;
 
 class User extends Model implements AuthenticatableContract, CanResetPasswordContract
 {
@@ -88,7 +88,7 @@ php artisan migrate
 
 # <a name="documentation"></a>Documentation
 
-Follow along the [Wiki](https://github.com/kodeine/laravel-acl/wiki) to find out more.
+Follow along the [Wiki](https://github.com/CapstoneLogic/laravel-acl/wiki) to find out more.
 
 # <a name="roadmap"></a>Roadmap
 
@@ -117,14 +117,14 @@ Here's the TODO list for the next release.
 
 *June 14, 2015*
 * [x] Added backward compatibility to l5.0 for lists() method.
-* [x] Added [Blade Template Extensions](https://github.com/kodeine/laravel-acl/wiki/Blade-Extensions).
+* [x] Added [Blade Template Extensions](https://github.com/CapstoneLogic/laravel-acl/wiki/Blade-Extensions).
 
 *March 28, 2015*
 * [x] Added Role Scope to get all users having a specific role. e.g `User::role('admin')->get();` will list all users having `admin` role.
 
 *March 7, 2015*
-* [x] `is()` and `can()` methods now support comma for `AND` and pipe as `OR` operator. Or pass an operator as a second param. [more information](https://github.com/kodeine/laravel-acl/wiki/Validate-Permissions-and-Roles)
-* [x] You can bind multiple permissions together so they inherit ones permission. [more information](https://github.com/kodeine/laravel-acl/wiki/Permissions-Inheritance)
+* [x] `is()` and `can()` methods now support comma for `AND` and pipe as `OR` operator. Or pass an operator as a second param. [more information](https://github.com/CapstoneLogic/laravel-acl/wiki/Validate-Permissions-and-Roles)
+* [x] You can bind multiple permissions together so they inherit ones permission. [more information](https://github.com/CapstoneLogic/laravel-acl/wiki/Permissions-Inheritance)
 
 # <a name="contribution-guidelines"></a>Contribution Guidelines
 

@@ -1,8 +1,8 @@
-<?php namespace Kodeine\Acl\Tests\Models;
+<?php namespace CapstoneLogic\Users\Tests\Models;
 
-use Kodeine\Acl\Models\Eloquent\Permission;
-use Kodeine\Acl\Models\Eloquent\Role;
-use Kodeine\Acl\Models\Eloquent\User;
+use CapstoneLogic\Users\Model\Permission;
+use CapstoneLogic\Users\Model\Role;
+use CapstoneLogic\Users\Model\User;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class RoleTest extends ModelsTest
@@ -41,7 +41,7 @@ class RoleTest extends ModelsTest
     {
         $expectations = [
             \Illuminate\Database\Eloquent\Model::class,
-            \Kodeine\Acl\Models\Eloquent\Role::class,
+            \CapstoneLogic\Users\Model\Role::class,
         ];
 
         foreach ($expectations as $expected) {
