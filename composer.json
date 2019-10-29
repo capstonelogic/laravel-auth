@@ -1,5 +1,5 @@
 {
-    "name": "capstonelogic/laravel-user-roles",
+    "name": "capstonelogic/laravel-auth",
     "description": "Light-weight role-based permissions for Laravel 5 built in Auth system.",
     "license": "MIT",
     "keywords": [
