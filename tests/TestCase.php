@@ -1,4 +1,4 @@
-<?php namespace CapstoneLogic\Users\Tests;
+<?php namespace CapstoneLogic\Auth\Tests;
 
 use Orchestra\Testbench\TestCase as BaseTestCase;
 
@@ -18,7 +18,7 @@ abstract class TestCase extends BaseTestCase
     protected function getPackageProviders($app)
     {
         return [
-            \CapstoneLogic\Users\UsersServiceProvider::class,
+            \CapstoneLogic\Auth\AuthServiceProvider::class,
         ];
     }
 
@@ -53,8 +53,8 @@ abstract class TestCase extends BaseTestCase
             'database' => ':memory:',
             'prefix'   => '',
         ]);
-        $config->set('auth.model', \CapstoneLogic\Users\Models\Eloquent\User::class);
-        $config->set('auth.providers.users.model', \CapstoneLogic\Users\Models\Eloquent\User::class);
+        $config->set('auth.model', \CapstoneLogic\Auth\Models\Eloquent\User::class);
+        $config->set('auth.providers.users.model', \CapstoneLogic\Auth\Models\Eloquent\User::class);
     }
 
     /* ------------------------------------------------------------------------------------------------

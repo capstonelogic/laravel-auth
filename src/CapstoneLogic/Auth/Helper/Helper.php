@@ -1,6 +1,6 @@
 <?php
 
-namespace CapstoneLogic\Users\Helper;
+namespace CapstoneLogic\Auth\Helper;
 
 use Illuminate\Support\Collection;
 

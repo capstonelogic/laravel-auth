@@ -1,9 +1,9 @@
 <?php
 
-namespace CapstoneLogic\Users\Model;
+namespace CapstoneLogic\Auth\Model;
 
 use Illuminate\Database\Eloquent\Model;
-use CapstoneLogic\Users\Traits\HasPermission;
+use CapstoneLogic\Auth\Traits\HasPermission;
 
 class Role extends Model
 {

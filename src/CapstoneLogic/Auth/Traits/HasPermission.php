@@ -1,8 +1,8 @@
 <?php
 
-namespace CapstoneLogic\Users\Traits;
+namespace CapstoneLogic\Auth\Traits;
 
-use CapstoneLogic\Users\Helper\Helper;
+use CapstoneLogic\Auth\Helper\Helper;
 
 trait HasPermission
 {
@@ -22,7 +22,7 @@ trait HasPermission
      */
     public function permissions()
     {
-        $model  = config('users.permission', 'CapstoneLogic\Users\Model\Permission');
+        $model  = config('users.permission', 'CapstoneLogic\Auth\Model\Permission');
         $prefix = config('users.db_prefix');
 
         $class = get_called_class();
@@ -92,7 +92,7 @@ trait HasPermission
         // lets call our base hasPermission() method
         // from role class. $merge already
         // has user & role permissions
-        $model = config('users.role', 'CapstoneLogic\Users\Model\Role');
+        $model = config('users.role', 'CapstoneLogic\Auth\Model\Role');
 
         return (new $model)->hasPermission($permission, $operator, $merge);
     }
@@ -185,7 +185,7 @@ trait HasPermission
     {
         if (is_string($permission) || is_numeric($permission)) {
 
-            $model = config('users.permission', 'CapstoneLogic\Users\Model\Permission');
+            $model = config('users.permission', 'CapstoneLogic\Auth\Model\Permission');
             $key   = is_numeric($permission) ? 'id' : 'name';
             $alias = (new $model)->where($key, $permission)->first();
 

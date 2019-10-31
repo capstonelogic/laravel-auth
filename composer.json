@@ -35,18 +35,18 @@
     },
     "autoload": {
         "psr-4": {
-            "CapstoneLogic\\Users\\": "src/"
+            "CapstoneLogic\\Auth\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "CapstoneLogic\\Users\\Tests\\": "tests/"
+            "CapstoneLogic\\Auth\\Tests\\": "tests/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "CapstoneLogic\\Users\\UsersServiceProvider"
+                "CapstoneLogic\\Auth\\AuthServiceProvider"
             ]
         }
     }

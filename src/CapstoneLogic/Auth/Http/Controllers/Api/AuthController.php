@@ -1,22 +1,22 @@
 <?php
 
-namespace CapstoneLogic\Users\Http\Controllers\Api;
+namespace CapstoneLogic\Auth\Http\Controllers\Api;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Carbon\Carbon;
 
 use App\Http\Controllers\Controller;
-use CapstoneLogic\Users\Http\Request\SignupRequest;
-use CapstoneLogic\Users\Http\Request\LoginRequest;
-use CapstoneLogic\Users\Model\User;
-use CapstoneLogic\Users\Resource\UserResource;
+use CapstoneLogic\Auth\Http\Request\SignupRequest;
+use CapstoneLogic\Auth\Http\Request\LoginRequest;
+use CapstoneLogic\Auth\Model\User;
+use CapstoneLogic\Auth\Resource\UserResource;
 
 class AuthController extends Controller {
 
     /**
      * @OA\Get(
-     *     path="/api/users/auth",
+     *     path="/api/auth",
      *     tags={"Auth"},
      *     @OA\Response(
      *          response=200,
@@ -45,7 +45,7 @@ class AuthController extends Controller {
 
     /**
      * @OA\Post(
-     *     path="/api/users/auth/signup",
+     *     path="/api/auth/signup",
      *     tags={"Auth"},
      *     @OA\RequestBody(
      *         description="Create user object",
@@ -89,7 +89,7 @@ class AuthController extends Controller {
 
     /**
      * @OA\Post(
-     *     path="/api/users/auth/login",
+     *     path="/api/auth/login",
      *     tags={"Auth"},
      *     @OA\RequestBody(
      *         description="Returns API token with given user email and password",
@@ -137,7 +137,7 @@ class AuthController extends Controller {
 
     /**
      * @OA\Get(
-     *     path="/api/users/auth/logout",
+     *     path="/api/auth/logout",
      *     tags={"Auth"},
      *     @OA\Response(
      *         response=200,

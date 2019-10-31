@@ -1,10 +1,10 @@
 <?php
 
-namespace CapstoneLogic\Users\Http\Request;
+namespace CapstoneLogic\Auth\Http\Request;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class SignupRequest extends FormRequest {
+class LoginRequest extends FormRequest {
     /**
      * Determine if the user is authorized to make this request.
      *
@@ -20,10 +20,9 @@ class SignupRequest extends FormRequest {
      */
     public function rules() {
         return [
-            'first_name' => 'required|string',
-            'last_name' => 'required|string',
-            'email' => 'required|string|email|unique:users',
+            'email' => 'required|string|email',
             'password' => 'required|string',
+            'remember_me' => 'boolean'
         ];
     }
 }

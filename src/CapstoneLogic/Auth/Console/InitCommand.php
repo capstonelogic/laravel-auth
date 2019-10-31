@@ -1,5 +1,5 @@
 <?php
-namespace CapstoneLogic\Users\Console;
+namespace CapstoneLogic\Auth\Console;
 
 use Illuminate\Console\Command;
 

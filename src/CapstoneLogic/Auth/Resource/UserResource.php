@@ -1,6 +1,6 @@
 <?php
 
-namespace CapstoneLogic\Users\Resource;
+namespace CapstoneLogic\Auth\Resource;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 

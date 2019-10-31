@@ -1,6 +1,6 @@
 <?php
 
-namespace CapstoneLogic\Users\Traits;
+namespace CapstoneLogic\Auth\Traits;
 
 trait HasPermissionInheritance
 {
@@ -133,7 +133,7 @@ trait HasPermissionInheritance
             return $cache;
         }
 
-        $model = config('users.permission', 'CapstoneLogic\Users\Model\Permission');
+        $model = config('users.permission', 'CapstoneLogic\Auth\Model\Permission');
         $query = (new $model)->where('id', $inherit_id)->first();
 
         return is_object($query) ? $this->setCache($query) : false;
@@ -171,7 +171,7 @@ trait HasPermissionInheritance
     {
         if ( is_string($permission) || is_numeric($permission) ) {
 
-            $model = config('users.permission', 'CapstoneLogic\Users\Models\Eloquent\Permission');
+            $model = config('users.permission', 'CapstoneLogic\Auth\Models\Eloquent\Permission');
             $key = is_numeric($permission) ? 'id' : 'name';
             $alias = (new $model)->where($key, $permission)->first();
 

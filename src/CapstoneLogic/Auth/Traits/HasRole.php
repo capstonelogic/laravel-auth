@@ -1,13 +1,13 @@
 <?php
 
-namespace CapstoneLogic\Users\Traits;
+namespace CapstoneLogic\Auth\Traits;
 
-use CapstoneLogic\Users\Traits\HasPermission;
+use CapstoneLogic\Auth\Traits\HasPermission;
 use Illuminate\Support\Str;
 
 /**
  * Class HasRoleImplementation
- * @package CapstoneLogic\Users\Traits
+ * @package CapstoneLogic\Auth\Traits
  *
  * @method static Builder|Collection|\Eloquent role($role, $column = null)
  */
@@ -29,7 +29,7 @@ trait HasRole
      */
     public function roles()
     {
-        $model = config('users.role', 'CapstoneLogic\Users\Model\Role');
+        $model = config('users.role', 'CapstoneLogic\Auth\Model\Role');
         $prefix = config('users.db_prefix');
 
         return $this->belongsToMany($model, $prefix . 'role_user')->withTimestamps();
@@ -232,7 +232,7 @@ trait HasRole
     {
         if ( is_string($role) || is_numeric($role) ) {
 
-            $model = config('users.role', 'CapstoneLogic\Users\Model\Role');
+            $model = config('users.role', 'CapstoneLogic\Auth\Model\Role');
             $key = is_numeric($role) ? 'id' : 'slug';
             $alias = (new $model)->where($key, $role)->first();
 

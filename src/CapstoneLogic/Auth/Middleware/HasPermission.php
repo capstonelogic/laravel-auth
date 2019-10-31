@@ -1,6 +1,6 @@
 <?php
 
-namespace CapstoneLogic\Users\Middleware;
+namespace CapstoneLogic\Auth\Middleware;
 
 use Closure;
 

@@ -1,4 +1,4 @@
-<?php namespace CapstoneLogic\Users\Tests;
+<?php namespace CapstoneLogic\Auth\Tests;
 
 use Illuminate\Support\Facades\Schema;
 

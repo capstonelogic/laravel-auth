@@ -1,6 +1,6 @@
 <?php
 
-namespace CapstoneLogic\Users;
+namespace CapstoneLogic\Auth;
 
 use Blade;
 use Request;
@@ -8,7 +8,7 @@ use Artisan;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Route;
 
-class UsersServiceProvider extends ServiceProvider
+class AuthServiceProvider extends ServiceProvider
 {
     /**
      * Indicates if loading of the provider is deferred.
@@ -40,13 +40,13 @@ class UsersServiceProvider extends ServiceProvider
             __DIR__ . '/../../config/users.php', 'users'
         );
 
-        Route::prefix('api/users')
+        Route::prefix('api/auth')
             ->middleware('api')
-            ->namespace('CapstoneLogic\Users')
+            ->namespace('CapstoneLogic\Auth')
             ->group(__DIR__ . '/../../routes/api.php');
 
         $this->commands([
-            \CapstoneLogic\Users\Console\InitCommand::class,
+            \CapstoneLogic\Auth\Console\InitCommand::class,
         ]);
     }
 

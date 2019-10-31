@@ -23,8 +23,8 @@ return [
     | can define your model here.
     */
 
-    'role'       => CapstoneLogic\Users\Model\Role::class,
-    'permission' => CapstoneLogic\Users\Model\Permission::class,
+    'role'       => CapstoneLogic\Auth\Model\Role::class,
+    'permission' => CapstoneLogic\Auth\Model\Permission::class,
 
     /*
     |--------------------------------------------------------------------------

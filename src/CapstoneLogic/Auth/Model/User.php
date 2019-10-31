@@ -1,13 +1,13 @@
 <?php
 
-namespace CapstoneLogic\Users\Model;
+namespace CapstoneLogic\Auth\Model;
 
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Passport\HasApiTokens;
-use CapstoneLogic\Users\Traits\HasRole;
+use CapstoneLogic\Auth\Traits\HasRole;
 
 class User extends Authenticatable
 {

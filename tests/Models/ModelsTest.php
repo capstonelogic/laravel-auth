@@ -1,6 +1,6 @@
-<?php namespace CapstoneLogic\Users\Tests\Models;
+<?php namespace CapstoneLogic\Auth\Tests\Models;
 
-use CapstoneLogic\Users\Tests\TestCase;
+use CapstoneLogic\Auth\Tests\TestCase;
 
 abstract class ModelsTest extends TestCase
 {

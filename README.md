@@ -45,14 +45,14 @@ composer require CapstoneLogic/laravel-acl "^1.0"
     'Illuminate\Foundation\Providers\ArtisanServiceProvider',
     'Illuminate\Auth\AuthServiceProvider',
     ...
-    'CapstoneLogic\Users\UsersServiceProvider',
+    'CapstoneLogic\Auth\AuthServiceProvider',
 ],
 ```
 
 3. Publish the package configuartion files and add your own models to the list of ACL models"
 
 ```
-$ php artisan vendor:publish --provider="CapstoneLogic\Users\UsersServiceProvider"
+$ php artisan vendor:publish --provider="CapstoneLogic\Auth\AuthServiceProvider"
 ```
 
 > **Use your own models.**
@@ -63,14 +63,14 @@ $ php artisan vendor:publish --provider="CapstoneLogic\Users\UsersServiceProvide
 ```php
 protected $routeMiddleware = [
     ....
-    'acl' => 'CapstoneLogic\Users\Middleware\HasPermission',
+    'acl' => 'CapstoneLogic\Auth\Middleware\HasPermission',
 ];
 ```
 
 5. Add the HasRole trait to your `User` model.
 
 ```php
-use CapstoneLogic\Users\Traits\HasRole;
+use CapstoneLogic\Auth\Traits\HasRole;
 
 class User extends Model implements AuthenticatableContract, CanResetPasswordContract
 {

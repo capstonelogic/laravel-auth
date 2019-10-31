@@ -1,8 +1,8 @@
-<?php namespace CapstoneLogic\Users\Tests\Models;
+<?php namespace CapstoneLogic\Auth\Tests\Models;
 
-use CapstoneLogic\Users\Model\Permission;
-use CapstoneLogic\Users\Model\Role;
-use CapstoneLogic\Users\Model\User;
+use CapstoneLogic\Auth\Model\Permission;
+use CapstoneLogic\Auth\Model\Role;
+use CapstoneLogic\Auth\Model\User;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class RoleTest extends ModelsTest
@@ -41,7 +41,7 @@ class RoleTest extends ModelsTest
     {
         $expectations = [
             \Illuminate\Database\Eloquent\Model::class,
-            \CapstoneLogic\Users\Model\Role::class,
+            \CapstoneLogic\Auth\Model\Role::class,
         ];
 
         foreach ($expectations as $expected) {

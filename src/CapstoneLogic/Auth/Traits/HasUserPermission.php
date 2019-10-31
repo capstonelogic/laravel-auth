@@ -1,6 +1,6 @@
 <?php
 
-namespace CapstoneLogic\Users\Traits;
+namespace CapstoneLogic\Auth\Traits;
 
 use Illuminate\Support\Collection;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace CapstoneLogic\Users\Model;
+namespace CapstoneLogic\Auth\Model;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -34,7 +34,7 @@ class Permission extends Model
      */
     public function roles()
     {
-        $model = config('users.role', 'CapstoneLogic\Users\Model\Role');
+        $model = config('users.role', 'CapstoneLogic\Auth\Model\Role');
 
         return $this->belongsToMany($model)->withTimestamps();
     }
